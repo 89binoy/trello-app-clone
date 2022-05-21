@@ -38,7 +38,6 @@ export const boardReducer = (boards, action)=>{
         }
 
         case 'ADD_LIST_ID_TO_BOARD':{
-            // const board= boards.find(item => item.id === action.payload.id);
             return boards.map((board)=>{
                 if(board.id === action.payload.id){
                     board.taskLists.push(action.payload.taskListId)
