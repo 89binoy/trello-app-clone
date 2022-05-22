@@ -60,7 +60,6 @@ export const taskListReducer = (taskLists, action ) => {
                 return list
             })
 
-               
             }
 
 
