@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { BoardContext } from '../contexts/board';
-// import shortid  from 'shortid';
+
 
 function BoardCreatingForm() {
     const [boardTitle, setBoardTitle] = useState('');
