@@ -1,5 +1,5 @@
 import { createContext, useReducer } from 'react';
-import { borderReducer } from '../contexts/board';
+import { borderReducer } from '../contexts/board.jsx';
 export const BoardContext = createContext();
 
  const BoardProvider= ({children})=>{

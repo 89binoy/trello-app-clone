@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import BoardProvider from '../contexts/board.jsx';
+import TaskProvider from '../contexts/task.jsx';
 import App from './App';
+import TaskListProvider from './contexts/taskList.jsx';
+import './index.css';
 import reportWebVitals from './reportWebVitals';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BoardProvider>
+      <TaskListProvider>
+        <TaskProvider>
+          <App/>
+        </TaskProvider>
+      </TaskListProvider>
+    </BoardProvider>
   </React.StrictMode>
 );
 

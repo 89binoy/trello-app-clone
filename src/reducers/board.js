@@ -82,7 +82,7 @@ export const boardReducer = (boards, action)=>{
         }
 
         default : {
-
+            
         }
     }
 }
