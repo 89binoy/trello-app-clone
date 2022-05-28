@@ -9,21 +9,9 @@ import AddItemForm from "./AddItemForm";
 import TaskCard from "./TaskCard";
 
 
-
-
-
 function TaskList({ taskList }) {
   const [taskTitle, setTaskTitle] = useState("");
   const [editMode, setEditMode] = useState(false);
-
-  /**
-   * {
-   *    id,
-   *     title,
-   *    tasks: ["task-1", "task-2"],
-   *     boardId
-   * }
-   */
 
 
   const { title } = taskList;
@@ -34,13 +22,7 @@ function TaskList({ taskList }) {
   const submitHandler = (e) => {
     e.preventDefault();
     const id = Date.now();
-    // const listId = taskList.id;
-    // const task = {
-    //   id,
-    //   title: taskTitle,
-    //   listId,
-    //   boardId: taskList.boardId,
-    // };
+
     dispatchTaskAction({ type: 'CREATE_TASK', payload: { id: id, title: taskTitle, taskListId: taskList.id, boardId: taskList.boardId } })
 
     dispatchTaskListAction({ type: 'ADD_TASK_ID_TO_LIST', payload: { id: taskList.id, taskId: id } })
