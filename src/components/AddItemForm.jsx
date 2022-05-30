@@ -40,7 +40,7 @@ function AddItemForm({
           className="add-button"
           onClick={(e) => {
             
-            // e.stopPropagation();
+            
             createHandler(e);
           }}
         >
@@ -48,7 +48,7 @@ function AddItemForm({
         </button>
         <img
           onClick={(e) => {
-            // e.stopPropagation();
+            
             setEditMode(false)
           }}
           className="form-icon"
