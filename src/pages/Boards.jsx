@@ -1,6 +1,12 @@
-const Boards =( ) => {
+import BoardCreatingForm from "../components/BoardCreatingForm"
+import BoardList from "../components/BoardList"
+
+const Boards = () => {
     return (
-        <h1> i am from board</h1>
+        <>
+            <BoardCreatingForm />
+            <BoardList />
+        </>
     )
 }
 
