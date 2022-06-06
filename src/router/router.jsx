@@ -1,17 +1,18 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import BoardDetails from '../pages/BoardDetails.jsx';
-import Boards from '../pages/Boards.jsx';
+import BoardDetails from '../pages/BoardDetails';
+import Boards from '../pages/Boards';
 
 
-const Router = ( ) =>{
+
+const Router = () => {
     return (
         <BrowserRouter>
-        <Routes>
-            <Route path = '/' element={<Boards/>} />
-            <Route path = '/:boardId' element={<BoardDetails/>}/>
-        </Routes>
+            <Routes>
+                <Route path = '/' element = {<Boards />} />
+                <Route path = '/:boardId' element = {<BoardDetails />} />
+            </Routes>
         </BrowserRouter>
     )
-    
 }
-export default Router;
+
+export default Router
