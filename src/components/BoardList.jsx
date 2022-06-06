@@ -1,8 +1,8 @@
-import {useContext} from 'react'
-import {Link} from 'react-router-dom'
-
-import BoardItem from './BoardItem'
+import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { BoardContext } from '../contexts/board'
+import BoardItem from './BoardItem'
+
 
 function BoardList() {
     const {boards} = useContext(BoardContext)
