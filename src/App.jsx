@@ -1,10 +1,10 @@
-import { Router } from 'react-router-dom';
 import './App.css';
+import Router from './router/Router';
 
 function App() {
   return (
-    <div >
-      <Router/>
+    <div>
+      <Router />
     </div>
   );
 }

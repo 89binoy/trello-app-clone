@@ -1,24 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import BoardProvider from '../contexts/board.jsx';
-import TaskProvider from '../contexts/task.jsx';
 import App from './App';
-import TaskListProvider from './contexts/taskList.jsx';
+import BoardProvider from './contexts/board';
+import TaskProvider from './contexts/task';
+import TaskListProvider from './contexts/taskList';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
     <BoardProvider>
       <TaskListProvider>
         <TaskProvider>
-          <App/>
+          <App />
         </TaskProvider>
       </TaskListProvider>
     </BoardProvider>
-  </React.StrictMode>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
