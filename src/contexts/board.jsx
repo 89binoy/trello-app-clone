@@ -1,12 +1,14 @@
 import { createContext, useReducer } from 'react';
-import { borderReducer } from '../contexts/board.jsx';
+import { boardReducer } from '../reducers/board';
+
 export const BoardContext = createContext();
 
- const BoardProvider= ({children})=>{
+const BoardProvider = ({children}) => {
 
-    const [boards, dispatchBoardAction] = useReducer(borderReducer, [])
-    return(
-        <BoardContext.Provider value= {{boards, dispatchBoardAction}}>
+    const [boards, dispatchBoardAction] = useReducer(boardReducer, [])
+
+    return (
+        <BoardContext.Provider value = {{boards, dispatchBoardAction}} >
             {children}
         </BoardContext.Provider>
     )
